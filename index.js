@@ -64,7 +64,7 @@ async function run() {
                 query = { email: req.query.email }
             }
 
-            const result = await bookingCollection.find().toArray();
+            const result = await bookingCollection.find(query).toArray();
             res.send(result)
         })
 
